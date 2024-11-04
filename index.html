@@ -1,0 +1,101 @@
+<html>
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script>
+        function changeToUser  () {
+            resetIcons();
+            const userIcon = document.getElementById('user-icon');
+            const userText = document.getElementById('user-text');
+            userIcon.classList.remove('bg-gray-200');
+            userIcon.classList.add('bg-blue-500', 'text-white');
+            userText.innerHTML = 'USER';
+        }
+
+        function changeToResume() {
+            resetIcons();
+            const firstIcon = document.getElementById('first-icon');
+            const firstText = document.getElementById('first-text');
+            firstIcon.classList.remove('bg-gray-200');
+            firstIcon.classList.add('bg-blue-500', 'text-white');
+            firstText.innerHTML = 'RESUME';
+        }
+
+        function changeToSkills() {
+            resetIcons();
+            const fileIcon = document.getElementById('file-icon');
+            const fileText = document.getElementById('file-text');
+            fileIcon.classList.remove('bg-gray-200');
+            fileIcon.classList.add('bg-blue-500', 'text-white');
+            fileText.innerHTML = 'SKILLS';
+        }
+
+        function changeToPortfolio() {
+            resetIcons();
+            const menuIcon = document.getElementById('menu-icon');
+            const menuText = document.getElementById('menu-text');
+            menuIcon.classList.remove('bg-gray-200');
+            menuIcon.classList.add('bg-blue-500', 'text-white');
+            menuText.innerHTML = 'PORTFOLIO';
+        }
+
+        function changeToContact() {
+            resetIcons();
+            const contactIcon = document.getElementById('contact-icon');
+            const contactText = document.getElementById('contact-text');
+            contactIcon.classList.remove('bg-gray-200');
+            contactIcon.classList.add('bg-blue-500', 'text-white');
+            contactText.innerHTML = 'CONTACT';
+        }
+
+        function resetIcons() {
+            const icons = document.querySelectorAll('.icon');
+            icons.forEach(icon => {
+                icon.classList.remove('bg-blue-500', 'text-white');
+                icon.classList.add('bg-gray-200');
+                icon.querySelector('span').innerHTML = '';
+            });
+        }
+    </script>
+</head>
+
+<body class="flex justify-center items-center h-screen bg-gray-100">
+    <div class="flex flex-col items-center space-y-4"> <!-- Changed to flex-col -->
+        <div id="user-icon" onclick="changeToUser  ()" class="icon relative flex justify-center items-center w-96 h-96 bg-gray-200 rounded-full cursor-pointer group">
+            <a class="fas fa-user text-gray-600 text-6xl" href="about.html">
+                <span id="user-text" class="absolute text-transparent">USER</span>
+                <span class="absolute bottom-full mb-2 w-max px-2 py-1 text-6xl text-white bg-black rounded opacity-0 group-hover:opacity-100">USER</span>
+            </a>
+        </div>
+        <div id="first-icon" onclick="changeToResume()" class="icon relative flex justify-center items-center w-96 h-96 bg-gray-200 rounded-full cursor-pointer group">
+            <a class="fas fa-briefcase text-gray-600 text-6xl" href="resume.html">
+            <span id="first-text" class="absolute text-transparent">RESUME</span>
+            <span class="absolute bottom-full mb-2 w-max px-2 py-1 text-6xl text-white bg-black rounded opacity-0 group-hover:opacity-100">RESUME</span>
+            </a>
+        </div>
+        <div id="file-icon" onclick="changeToSkills()" class="icon relative flex justify-center items-center w-96 h-96 bg-gray-200 rounded-full cursor-pointer group">
+            <a class="fas fa-laptop-code text-gray-600 text-6xl" href="skills.html">
+            <span id="file-text" class="absolute text-transparent">SKILLS</span>
+            <span class="absolute bottom-full mb-2 w-max px-2 py-1 text-6xl text-white bg-black rounded opacity-0 group-hover:opacity-100">SKILLS</span>
+            </a>
+        </div>
+        <!-- <div id="menu-icon" onclick="changeToPortfolio()" class="icon relative flex justify-center items-center w-16 h-16 bg-gray-200 rounded-full cursor-pointer group">
+            <a class="fas fa-code text-gray-600 text-2xl" href="portfolio.html">
+            <span id="menu-text" class="absolute text-transparent">PORTFOLIO</span>
+            <span class="absolute bottom-full mb-2 w-max px-2 py-1 text-6xl text-white bg-black rounded opacity-0 group-hover:opacity-100">PORTFOLIO</span>
+            </a>
+        </div> -->
+        <div id="contact-icon" onclick="changeToContact()" class="icon relative flex justify-center items-center w-96 h-96 bg-gray-200 rounded-full cursor-pointer group">
+            <a class="fas fa-address-book text-gray-600 text-6xl" href="contact.html">
+            <span id="contact-text" class="absolute text-transparent">CONTACT</span>
+            <span class="absolute bottom-full mb-2 w-max px-2 py-1 text-6xl text-white bg-black rounded opacity-0 group-hover:opacity-100">CONTACT</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="bg-gray-700 text-white text-sm px-4 py-2 w-full text-center absolute bottom-0 flex items-center justify-center">
+        <span>© 2024</span>
+    </div>
+</body>
+
+</html>

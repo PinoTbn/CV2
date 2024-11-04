@@ -1,0 +1,78 @@
+<html>
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .slide-up {
+            animation: slideUp 2s ease forwards;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto flex justify-between items-center py-2 px-6">
+            <div class="text-2xl font-bold">
+                <!-- Logo or Title can go here -->
+            </div>
+            <nav class="space-x-6">
+                <a class="text-6xl text-gray-400 hover:text-gray-900" href="index.html">
+                    HOME
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Centered Content -->
+    <div class="container mx-auto items-center py-2 px-6">
+        <div class="col-sm-12 offset-sm-0 col-lg-8 offset-lg-2">
+            <div class="p-3 rounded-full">
+                <i class="fas fa-map-marker-alt text-6xl text-blue-500 py-10"></i>
+            </div>
+            <div class="slide-up">
+                <div class="text-6xl font-bold mb-4">Alamat</div>
+                <div class="text-6xl text-gray-600 mt-1">Harapan Indah</div>
+                <div class="text-6xl text-gray-600">Medan Satria, Bekasi</div>
+                <div class="text-6xl text-gray-600">Jawa Barat</div>
+            </div>
+        </div>
+        <div class="col-sm-12 offset-sm-0 col-lg-8 offset-lg-2">
+            <div class="p-3 rounded-full">
+                <i class="fas fa-phone-alt text-6xl text-blue-500 py-10"></i>
+            </div>
+            <div class="slide-up">
+                <div class="text-6xl font-bold mb-4">Handphone</div>
+                <div class="text-6xl text-gray-600">0811-1234-4567</div>
+            </div>
+        </div>
+        <div class="col-sm-12 offset-sm-0 col-lg-8 offset-lg-2">
+            <div class="p-3 rounded-full">
+                <i class="fas fa-envelope text-6xl text-blue-500 py-10"></i>
+            </div>
+            <div class="slide-up">
+                <div class="text-6xl font-bold mb-4">Email</div>
+                <div class="text-6xl text-gray-600">saya@gmail.com</div>
+            </div>
+        </div>
+        <div class="col-sm-12 offset-sm-0 col-lg-8 offset-lg-2">
+            <div class="p-3 rounded-full">
+                <i class="fab fa-linkedin text-6xl text-blue-500 py-10"></i>
+            </div>
+            <div class="slide-up">
+                <div class="text-6xl font-bold mb-4">Linkedin</div>
+                <div class="text-6xl text-gray-600">linkedin.com/id/saya</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
